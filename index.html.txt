@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JPT Nexus Messenger</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="messenger">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>JPT Nexus Messenger</h2>
+
+      <div class="contact" onclick="openChat('Roosevelt Remon', 'roosevelt.jpg', 'si jam kay dakog mata')">
+        <div class="contact-img">
+          <img src="roosevelt.jpg" alt="Roosevelt" />
+          <span class="active-dot"></span>
+        </div>
+        <div class="contact-info">
+          <h3>Roosevelt Remon</h3>
+          <p>si jam kay dakog mata</p>
+        </div>
+      </div>
+
+      <div class="contact" onclick="openChat('Tanya Fontanilla', 'tanya.jpg', 'oy naa koy chika nimo ba, hapit mi magbulag ni janna tungod kay nag cheat ko')">
+        <div class="contact-img">
+          <img src="tanya.jpg" alt="Tanya" />
+          <span class="active-dot"></span>
+        </div>
+        <div class="contact-info">
+          <h3>Tanya Fontanilla</h3>
+          <p>oy naa koy chika nimo ba...</p>
+        </div>
+      </div>
+
+      <div class="contact" onclick="openChat('Earl Jhon Palma', 'earl.jpg', 'love gihapon nako si cherry biskan unsaon bai')">
+        <div class="contact-img">
+          <img src="earl.jpg" alt="Earl" />
+          <span class="active-dot"></span>
+        </div>
+        <div class="contact-info">
+          <h3>Earl Jhon Palma</h3>
+          <p>love gihapon nako si cherry...</p>
+        </div>
+      </div>
+
+      <div class="contact" onclick="openChat('Christian Laxina', 'christian.jpg', 'hapit mailog akong baby cakes ba atay kaayo hahahaha')">
+        <div class="contact-img">
+          <img src="christian.jpg" alt="Christian" />
+          <span class="active-dot"></span>
+        </div>
+        <div class="contact-info">
+          <h3>Christian Laxina</h3>
+          <p>hapit mailog akong baby cakes...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat -->
+    <div class="chat">
+      <div class="chat-header">
+        <div class="chat-header-img">
+          <img id="chat-img" src="roosevelt.jpg" alt="Contact" />
+          <span class="active-dot"></span>
+        </div>
+        <div>
+          <h3 id="chat-name">Roosevelt Remon</h3>
+          <p>Active now</p>
+        </div>
+      </div>
+
+      <div class="chat-body" id="chat-body">
+        <div class="message received">si jam kay dakog mata</div>
+      </div>
+
+      <div class="chat-footer">
+        <input type="text" id="msgInput" placeholder="Type a message..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

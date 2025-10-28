@@ -1,0 +1,22 @@
+function openChat(name, img, message) {
+  document.getElementById("chat-name").textContent = name;
+  document.getElementById("chat-img").src = img;
+
+  const chatBody = document.getElementById("chat-body");
+  chatBody.innerHTML = `<div class="message received">${message}</div>`;
+}
+
+function sendMessage() {
+  const input = document.getElementById("message-input");
+  const text = input.value.trim();
+  if (text === "") return;
+
+  const chatBody = document.getElementById("chat-body");
+  const msgDiv = document.createElement("div");
+  msgDiv.classList.add("message", "sent");
+  msgDiv.textContent = text;
+
+  chatBody.appendChild(msgDiv);
+  input.value = "";
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
